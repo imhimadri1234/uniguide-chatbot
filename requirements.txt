@@ -1,0 +1,10 @@
+streamlit==1.45.1
+groq==0.28.0
+langchain==1.2.10
+langchain-community==0.4.1
+langchain-huggingface==1.2.2
+langchain-text-splitters==1.1.1
+faiss-cpu==1.13.2
+sentence-transformers==5.2.3
+python-dotenv==1.2.2
+PyMuPDF==1.26.0

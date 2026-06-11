@@ -1,0 +1,18 @@
+Student Name: Himadri Das
+Degree: B.Sc. Honours in Computer Science
+University: University of Kalyani
+Cumulative Percentage: 71.89%
+CGPA: 7.64
+6th Semester SGPA: 7.75
+Result: Qualified
+
+Semester wise SGPA:
+1st Semester: 7.70
+2nd Semester: 8.20
+3rd Semester: 7.69
+4th Semester: 6.92
+5th Semester: 7.75
+6th Semester: 7.75
+
+Total Credits: 140
+Cumulative Marks Obtained: 1330 out of 1850

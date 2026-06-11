@@ -1,0 +1,17 @@
+# Environment
+.env
+fresh_env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit secrets (never push to GitHub)
+.streamlit/secrets.toml
+
+# Data (optional - remove this line if you want to push data)
+# data/
+
+# OS files
+.DS_Store
+Thumbs.db
