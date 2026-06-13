@@ -290,42 +290,21 @@ html, body, [class*="css"] {
 """, unsafe_allow_html=True)
 
 # ─── AUTHENTICATION ──────────────────────────────────────────────────────────
-USERS = {
-    "admin": "uniguide123",
-    "student": "study2024",
-    "demo": "demo123",
-}
-
-def login_page():
-    st.markdown("""
-    <div style="text-align:center; padding: 3rem 0 1rem 0;">
-        <div style="font-size:3rem">🎓</div>
-        <div class="hero-title" style="font-size:2rem">UniGuide</div>
-        <div class="hero-sub">West Bengal University Admission Assistant</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns([1, 1.4, 1])
-    with col2:
-        st.markdown('<div class="auth-box">', unsafe_allow_html=True)
-        st.markdown('<p style="color:#a78bfa; font-weight:600; margin-bottom:1rem; text-align:center">Sign In</p>', unsafe_allow_html=True)
-        username = st.text_input("Username", placeholder="Enter username")
-        password = st.text_input("Password", type="password", placeholder="Enter password")
-        if st.button("Login →", use_container_width=True):
-            if username in USERS and USERS[username] == password:
-                st.session_state.logged_in = True
-                st.session_state.username = username
-                st.rerun()
-            else:
-                st.error("Invalid credentials")
-        st.markdown('<p style="color:rgba(255,255,255,0.3); font-size:0.75rem; text-align:center; margin-top:1rem">Demo: username=demo, password=demo123</p>', unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+import sys
+sys.path.append(os.path.dirname(__file__))
+from login_page import show_login_page
+from register_page import show_register_page
 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
+if "current_page" not in st.session_state:
+    st.session_state.current_page = "login"
 
 if not st.session_state.logged_in:
-    login_page()
+    if st.session_state.current_page == "login":
+        show_login_page()
+    else:
+        show_register_page()
     st.stop()
 
 # ─── GROQ CLIENT ────────────────────────────────────────────────────────────
