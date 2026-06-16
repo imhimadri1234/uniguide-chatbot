@@ -517,18 +517,30 @@ Answer:"""
 # ─── PDF EXTRACTION ────────────────────────────────────────────────────────
 def extract_pdf_text(uploaded_file):
     try:
-        pdf_bytes = uploaded_file.read()
-        doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+        file_bytes = uploaded_file.read()
+        file_name = uploaded_file.name.lower()
+
+        # -------- If image file (JPG/PNG) → use EasyOCR directly --------
+        if file_name.endswith(('.jpg', '.jpeg', '.png')):
+            reader = get_ocr_reader()
+            result = reader.readtext(file_bytes)
+            text = ""
+            for detection in result:
+                text += detection[1] + "\n"
+            return text[:3000] if text.strip() else "Could not extract text from image."
+
+        # -------- If PDF file --------
+        doc = fitz.open(stream=file_bytes, filetype="pdf")
         text = ""
 
-        # -------- First try normal text extraction --------
+        # First try normal text extraction
         for page in doc:
             page_text = page.get_text("text")
             text += page_text + "\n"
 
         text = "\n".join(dict.fromkeys(text.splitlines()))
 
-        # -------- If very little text → use EasyOCR --------
+        # If very little text → use EasyOCR on PDF pages
         if len(text.replace("\n", "").strip()) < 50:
             text = ""
             reader = get_ocr_reader()
@@ -542,7 +554,7 @@ def extract_pdf_text(uploaded_file):
         return text[:3000] if text.strip() else "Could not extract text from PDF."
 
     except Exception as e:
-        return f"PDF Error: {str(e)}"
+        return f"File Error: {str(e)}"
 
 # ─── MAIN QUERY HANDLER ───────────────────────────────────────────────────
 def handle_query(query, db, chat_history, pdf_context=""):
@@ -634,7 +646,7 @@ with st.sidebar:
 
     # PDF Upload
     st.markdown('<p style="color:rgba(255,255,255,0.5); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">📄 Upload PDF</p>', unsafe_allow_html=True)
-    uploaded_pdf = st.file_uploader("Upload marksheet / document", type=["pdf"], label_visibility="collapsed")
+    uploaded_pdf = st.file_uploader("Upload marksheet / document", type=["pdf", "jpg", "jpeg", "png"], label_visibility="collapsed")
     if "pdf_context" not in st.session_state:
         st.session_state.pdf_context = ""
     if uploaded_pdf:
