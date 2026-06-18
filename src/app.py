@@ -1,5 +1,6 @@
 import re
 import os
+import io
 import fitz  # PyMuPDF
 import streamlit as st
 from langchain_community.vectorstores import FAISS
@@ -11,6 +12,25 @@ from groq import Groq
 import easyocr
 _ocr_reader = None
 
+
+from gtts import gTTS
+import base64
+
+def text_to_speech(text, lang='en'):
+    """Convert text to speech and return base64 audio"""
+    try:
+        clean_text = re.sub(r'[*#_`]', '', text)
+        clean_text = clean_text[:500]
+        tts = gTTS(text=clean_text, lang=lang, slow=False)
+        audio_buffer = io.BytesIO()
+        tts.write_to_fp(audio_buffer)
+        audio_buffer.seek(0)
+        audio_base64 = base64.b64encode(audio_buffer.read()).decode()
+        return audio_base64
+    except Exception as e:
+        st.error(f"TTS Error: {str(e)}")
+        return None
+    
 def get_ocr_reader():
     global _ocr_reader
     if _ocr_reader is None:
@@ -782,6 +802,31 @@ with col_main:
     chat_html += '</div>'
     st.markdown(chat_html, unsafe_allow_html=True)
 
+    # Voice output for last bot message
+    if st.session_state.messages and st.session_state.messages[-1]["role"] == "assistant":
+        last_msg = st.session_state.messages[-1]["content"]
+        msg_index = len(st.session_state.messages)
+
+        col_v1, col_v2 = st.columns([1, 5])
+        with col_v1:
+            if st.button("🔊 Listen", key=f"voice_btn_{msg_index}"):
+                st.session_state.voice_counter = st.session_state.get('voice_counter', 0) + 1
+                st.session_state.audio_for_msg = msg_index
+                lang_code = 'bn' if detect_bengali(last_msg) else 'en'
+                with st.spinner("Generating audio..."):
+                    audio_b64 = text_to_speech(last_msg, lang=lang_code)
+                st.session_state.current_audio = audio_b64
+
+        # Only play audio if it belongs to the CURRENT last message
+        if (st.session_state.get("current_audio")
+                and st.session_state.get("audio_for_msg") == msg_index):
+            counter = st.session_state.get('voice_counter', 0)
+            st.markdown(f"""
+            <audio autoplay id="audio_{counter}">
+                <source src="data:audio/mp3;base64,{st.session_state.current_audio}" type="audio/mp3">
+            </audio>
+            """, unsafe_allow_html=True)
+
     # Auto-scroll
     st.markdown("""
     <script>
@@ -804,6 +849,7 @@ with col_main:
 
     # Handle pending query (from chips/buttons)
     if "pending_query" in st.session_state:
+        st.session_state.current_audio = None  # Clear old audio
         pending = st.session_state.pop("pending_query")
         st.session_state.messages.append({"role": "user", "content": pending})
         with st.spinner("Thinking..."):
@@ -821,6 +867,7 @@ with col_main:
 
     # Chat input
     if prompt := st.chat_input("Ask about courses, fees, eligibility, admissions..."):
+        st.session_state.current_audio = None  # Clear old audio
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.spinner("Thinking..."):
             query_with_filter = prompt
