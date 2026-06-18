@@ -184,7 +184,6 @@ html, body, [class*="css"] {
     color: white !important;
     font-family: 'Sora', sans-serif !important;
 }
-
 /* Info cards */
 .info-card {
     background: rgba(255,255,255,0.04);
@@ -865,14 +864,15 @@ with col_main:
             response = handle_query(query_with_filter, db, st.session_state.messages[:-1], st.session_state.pdf_context)
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.rerun()
-    # Voice Input
-    col_mic, col_space = st.columns([1, 5])
+    # Voice Input - positioned beside chat input
+    col_chat, col_mic = st.columns([10, 1])
     with col_mic:
         voice_text = speech_to_text(
             language='en',
-            start_prompt="🎤 Speak",
-            stop_prompt="⏹️ Stop",
+            start_prompt="🎤",
+            stop_prompt="⏹️",
             just_once=True,
+            use_container_width=True,
             key='voice_input'
         )
 
