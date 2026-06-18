@@ -10,3 +10,5 @@ python-dotenv==1.2.2
 PyMuPDF==1.26.0
 firebase-admin==7.4.0
 easyocr==1.7.2
+gTTS==2.5.4
+streamlit-mic-recorder==0.0.8

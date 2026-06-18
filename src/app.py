@@ -11,6 +11,7 @@ from groq import Groq
 
 import easyocr
 _ocr_reader = None
+from streamlit_mic_recorder import speech_to_text
 
 
 from gtts import gTTS
@@ -861,6 +862,30 @@ with col_main:
                 filter_str = " ".join(uni_names)
                 query_with_filter = pending + " in " + filter_str
 
+            response = handle_query(query_with_filter, db, st.session_state.messages[:-1], st.session_state.pdf_context)
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.rerun()
+    # Voice Input
+    col_mic, col_space = st.columns([1, 5])
+    with col_mic:
+        voice_text = speech_to_text(
+            language='en',
+            start_prompt="🎤 Speak",
+            stop_prompt="⏹️ Stop",
+            just_once=True,
+            key='voice_input'
+        )
+
+    if voice_text:
+        st.session_state.current_audio = None
+        st.session_state.messages.append({"role": "user", "content": voice_text})
+        with st.spinner("Thinking..."):
+            query_with_filter = voice_text
+            if uni_filter:
+                uni_map = {"Calcutta University (CU)": "calcutta", "Jadavpur University (JU)": "jadavpur", "Kalyani University (KU)": "kalyani"}
+                uni_names = [uni_map[u] for u in uni_filter if u in uni_map]
+                filter_str = " ".join(uni_names)
+                query_with_filter = voice_text + " in " + filter_str
             response = handle_query(query_with_filter, db, st.session_state.messages[:-1], st.session_state.pdf_context)
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.rerun()
