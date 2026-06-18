@@ -319,7 +319,30 @@ if not st.session_state.logged_in:
 @st.cache_resource
 def get_groq_client():
     return Groq(api_key=os.getenv("GROQ_API_KEY"))
+# ─── LANGUAGE TRANSLATION ────────────────────────────────────────────────────
+from deep_translator import GoogleTranslator
 
+def detect_bengali(text):
+    bengali_range = range(0x0980, 0x09FF)
+    return any(ord(char) in bengali_range for char in text)
+
+def translate_to_english(text):
+    try:
+        return GoogleTranslator(source='bn', target='en').translate(text)
+    except Exception as e:
+        return text
+
+def translate_to_bengali(text):
+    try:
+        max_chunk = 4000
+        if len(text) <= max_chunk:
+            return GoogleTranslator(source='en', target='bn').translate(text)
+        else:
+            chunks = [text[i:i+max_chunk] for i in range(0, len(text), max_chunk)]
+            translated = [GoogleTranslator(source='en', target='bn').translate(c) for c in chunks]
+            return " ".join(translated)
+    except Exception as e:
+        return text
 # ─── HELPERS ────────────────────────────────────────────────────────────────
 def normalize(text):
     text = text.lower()
@@ -558,6 +581,12 @@ def extract_pdf_text(uploaded_file):
 
 # ─── MAIN QUERY HANDLER ───────────────────────────────────────────────────
 def handle_query(query, db, chat_history, pdf_context=""):
+    # Detect Bengali and translate to English for processing
+    is_bengali_query = detect_bengali(query)
+    original_query = query
+    if is_bengali_query:
+        query = translate_to_english(query)
+
     universities, detected_course, intents = detect_entities(query)
     nq = normalize(query)
     is_compare = "compare" in nq or "difference" in nq or "vs" in nq
@@ -621,7 +650,13 @@ def handle_query(query, db, chat_history, pdf_context=""):
         context = f"PDF Context:\n{pdf_context}\n\n" + context
 
     # Always use Groq for natural, conversational answers
-    return ask_groq(query, context, chat_history)
+    answer = ask_groq(query, context, chat_history)
+
+    # Translate answer back to Bengali if user asked in Bengali
+    if is_bengali_query:
+        answer = translate_to_bengali(answer)
+
+    return answer
 
 # ─── SIDEBAR ─────────────────────────────────────────────────────────────
 with st.sidebar:
