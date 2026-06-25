@@ -214,7 +214,7 @@ html, body, [class*="css"] {
 
 /* Scrollable chat area */
 .chat-container {
-    height: 62vh;
+    height: 45vh;
     overflow-y: auto;
     padding: 0.5rem;
     scrollbar-width: thin;
