@@ -997,7 +997,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Chemical Engineering
+Course Name: B.Tech in Chemical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Chemical Engineering
@@ -1011,7 +1011,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Chemical Engineering
+Course Name: M.Tech in Chemical Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Chemical Engineering
@@ -1039,12 +1039,12 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Civil Engineering
+Course Name: B.Tech in Civil Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Civil Engineering
 Duration: 4 Years
-Eligibility: Approximatelypassing 10+2 with at least 60% aggregate marks (45% for reserved categories) in Physics, Chemistry, and Mathematics (PCM)
+Eligibility: Approximately passing 10+2 with at least 60% aggregate marks (45% for reserved categories) in Physics, Chemistry, and Mathematics (PCM)
 Admission: WBJEE rank is mandatory
 Fees: Approximately ₹1.03 Lakhs
 Seats: 109
@@ -1053,7 +1053,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Civil Engineering (Evening)
+Course Name: B.Tech in Civil Engineering (Evening)
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Civil Engineering
@@ -1067,7 +1067,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Civil Engineering (Evening)
+Course Name: M.Tech in Civil Engineering (Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Civil Engineering
@@ -1081,7 +1081,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Computer Science & Engineering
+Course Name: B.Tech in Computer Science & Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Computer Science & Engineering
@@ -1095,7 +1095,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.Tech. in Artificial Intelligence and Data Science (Evening)
+Course Name: M.Tech in Artificial Intelligence and Data Science (Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Computer Science & Engineering
@@ -1109,7 +1109,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.Tech. in Computer Technology with Specialisation in Artificial Intelligence and Data Science (Evening)
+Course Name: M.Tech in Computer Technology with Specialisation in Artificial Intelligence and Data Science (Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Computer Science & Engineering
@@ -1137,7 +1137,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Computer Science & Engineering
+Course Name: M.Tech in Computer Science & Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Computer Science & Engineering
@@ -1151,7 +1151,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Construction Engineering
+Course Name: B.Tech in Construction Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Construction Engineering
@@ -1165,7 +1165,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Construction Engineering (Evening)
+Course Name: M.Tech in Construction Engineering (Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Construction Engineering
@@ -1179,7 +1179,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Electrical Engineering
+Course Name: B.Tech in Electrical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Electrical Engineering
@@ -1193,7 +1193,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Electrical Engineering (Evening)
+Course Name: B.Tech in Electrical Engineering (Evening)
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Electrical Engineering
@@ -1207,7 +1207,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Control System Engineering
+Course Name: M.Tech in Control System Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Electrical Engineering
@@ -1221,7 +1221,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Electrical Engineering
+Course Name: M.Tech in Electrical Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Electrical Engineering
@@ -1235,7 +1235,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Illumination Engineering
+Course Name: M.Tech in Illumination Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Electrical Engineering
@@ -1249,7 +1249,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Electronics & Tele communication Engineering
+Course Name: B.Tech in Electronics & Tele communication Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Electronics & Tele communication Engineering
@@ -1264,7 +1264,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Electronics & Tele communication Engineering
+Course Name: M.Tech in Electronics & Tele communication Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Electronics & Tele communication Engineering
@@ -1292,7 +1292,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: MTech in Intelligent Automation and Robotics(Evening)
+Course Name: M.Tech in Intelligent Automation and Robotics(Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Electronics & Tele communication Engineering
@@ -1306,7 +1306,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Food Technology & Biochemical Engineering
+Course Name: B.Tech in Food Technology & Biochemical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Food Technology & Biochemical Engineering
@@ -1334,7 +1334,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Information Technology
+Course Name: B.Tech in Information Technology
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Information Technology
@@ -1348,7 +1348,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Software Engineering
+Course Name: M.Tech in Software Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Information Technology
@@ -1362,7 +1362,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Software Engineering (Evening)
+Course Name: M.Tech in Software Engineering (Evening)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Information Technology
@@ -1377,7 +1377,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Instrumentation & Electronics Engineering
+Course Name: B.Tech in Instrumentation & Electronics Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Instrumentation & Electronics Engineering
@@ -1405,7 +1405,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Mechanical Engineering
+Course Name: B.Tech in Mechanical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Mechanical Engineering
@@ -1419,7 +1419,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Mechanical Engineering (Evening)
+Course Name: B.Tech in Mechanical Engineering (Evening)
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Mechanical Engineering
@@ -1433,7 +1433,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Automobile Engineering
+Course Name: M.Tech in Automobile Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Mechanical Engineering
@@ -1447,7 +1447,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Mechanical Engineering
+Course Name: M.Tech in Mechanical Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Mechanical Engineering
@@ -1461,7 +1461,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Metallurgical Engineering
+Course Name: B.Tech in Metallurgical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Metallurgical & Material Engineering
@@ -1475,7 +1475,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Metallurgical Engineering
+Course Name: M.Tech in Metallurgical Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Metallurgical & Material Engineering
@@ -1489,7 +1489,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.Tech. in Metallurgical Engineering
+Course Name: M.Tech in Metallurgical Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Metallurgical & Material Engineering
@@ -1503,7 +1503,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Production Engineering
+Course Name: B.Tech in Production Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Production Engineering
@@ -1517,7 +1517,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Production Engineering
+Course Name: M.Tech in Production Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Production Engineering
@@ -1532,7 +1532,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Printing Engineering
+Course Name: B.Tech in Printing Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Printing Engineering
@@ -1560,7 +1560,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.E. in Power Engineering
+Course Name: B.Tech in Power Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Power Engineering
@@ -1574,7 +1574,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Power Engineering
+Course Name: M.Tech in Power Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Power Engineering
@@ -1630,7 +1630,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: B.Pharma. in Ayurveda
+Course Name: B.Pharm in Ayurveda
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Pharmaceutical Technology
@@ -1687,7 +1687,7 @@ Source: Official Website
                                                   
 
 University: Jadavpur University
-Course Name: M.E. in Water Resources & Hydraulic Engineering
+Course Name: M.Tech in Water Resources & Hydraulic Engineering
 Level: Postgraduate
 Course Category: Interdisciplinary Studies, Law & Management
 Department: Water Resource Engineering

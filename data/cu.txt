@@ -629,7 +629,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Com.  
+Course Name: M.Com
 Level: Postgraduate
 Course Category: Commerce, Social Welfare & Business Management
 Department: Commerce
@@ -793,7 +793,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: B. Tech in Optics & Optoelectronics Engineering (OOE)
+Course Name: B.Tech in Optics & Optoelectronics Engineering (OOE)
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Applied Optics & Photonics
@@ -834,7 +834,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: Ph.D.(tech) in Applied Optics & Photonics
+Course Name: Ph.D. in Applied Optics & Photonics
 Level: Doctoral
 Course Category: Engineering & Technology
 Department: Applied Optics & Photonics
@@ -848,7 +848,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: B.Tech. in Computer Science and Engineering
+Course Name: B.Tech in Computer Science and Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Computer Science and Engineering
@@ -875,7 +875,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: M.Tech. in Computer Science and Engineering
+Course Name: M.Tech in Computer Science and Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology 
 Department: Computer Science and Engineering
@@ -903,7 +903,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: Ph.D.(Tech) in Computer Science and Engineering
+Course Name: Ph.D. in Computer Science and Engineering
 Level: Doctorate
 Course Category: Engineering & Technology
 Department:  Computer Science and Engineering
@@ -916,7 +916,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: Ph.D.(Science) in Computer Science
+Course Name: Ph.D. in Computer Science
 Level: Doctorate
 Course Category: Engineering & Technology
 Department: Computer Science and Engineering
@@ -929,7 +929,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Electrical Engineering
+Course Name: B.Tech in Electrical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology  
 Department: Applied Physics 
@@ -957,7 +957,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: Ph.D.(Tech) in Electrical  Engineering
+Course Name: Ph.D. in Electrical  Engineering
 Level: Doctorate
 Course Category: Engineering & Technology
 Department: Applied Physics
@@ -971,7 +971,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: B.Tech. in Instrumentation Engineering
+Course Name: B.Tech in Instrumentation Engineering
 Level: Undergraduate 
 Course Category: Engineering & Technology
 Department: Applied Physics 
@@ -999,7 +999,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: Ph.D.(Tech) in Instrumentation Engineering
+Course Name: Ph.D. in Instrumentation Engineering
 Level: Doctorate
 Course Category: Engineering & Technology
 Department: Applied Physics
@@ -1012,7 +1012,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Polymer Science & Technology
+Course Name: B.Tech in Polymer Science & Technology
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Polymer Science & Technology 
@@ -1025,7 +1025,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. in Polymer Science & Technology
+Course Name: M.Tech in Polymer Science & Technology
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Polymer Science & Technology
@@ -1039,7 +1039,7 @@ Source: Official Website of CU.
                  
 
 University Name: University Of Calcutta
-Course Name: B.Tech. in Chemical Engineering
+Course Name: B.Tech in Chemical Engineering
 Level: Undergraduate
 Course Category: Engineering & Technology 
 Department: Chemical Engineering 
@@ -1066,7 +1066,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: Ph.D.(Tech) in Chemical Engineering 
+Course Name: Ph.D. in Chemical Engineering 
 Level: Doctorate
 Course Category: Engineering & Technology
 Department: Chemical Engineering
@@ -1132,7 +1132,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. course in VLSI DESIGN  (Self Financing)
+Course Name: M.Tech course in VLSI DESIGN  (Self Financing)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Radio Physics and Electronics
@@ -1145,7 +1145,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: Ph.D. (Tech) in Radio Physics & Electronics
+Course Name: Ph.D in Radio Physics & Electronics
 Level: Doctorate
 Course Category: Engineering & Technology
 Department: Radio Physics and Electronics
@@ -1158,7 +1158,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Chemical Technology (Ceramic Engineering)
+Course Name: B.Tech in Chemical Technology (Ceramic Engineering)
 Level: Undergraduate
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1171,7 +1171,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Chemical Technology (Oil Technology)
+Course Name: B.Tech in Chemical Technology (Oil Technology)
 Level: Undergraduate 
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1184,7 +1184,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Chemical Technology(Petrochemicals & Petroleum Refinery Engineering)
+Course Name: B.Tech in Chemical Technology(Petrochemicals & Petroleum Refinery Engineering)
 Level: Undergraduate 
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1197,7 +1197,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Chemical Technology(Pharmaceuticals & Fine Chemical Technology)
+Course Name: B.Tech in Chemical Technology(Pharmaceuticals & Fine Chemical Technology)
 Level: Undergraduate 
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1210,7 +1210,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. in Chemical Technology (Ceramic Engineering)
+Course Name: M.Tech in Chemical Technology (Ceramic Engineering)
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1223,7 +1223,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. in Oil Technology
+Course Name: M.Tech in Oil Technology
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1236,7 +1236,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. in Petrochemicals & Petroleum Refinery Engineering
+Course Name: M.Tech in Petrochemicals & Petroleum Refinery Engineering
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1249,7 +1249,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. in Pharmaceutical Technology
+Course Name: M.Tech in Pharmaceutical Technology
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Chemical Technology
@@ -1267,7 +1267,7 @@ Level: Doctoral
 Course Category: Engineering & Technology
 Department: Chemical Technology
 Duration: 3 to 6 Years
-Eligibility: M.Tech. in Ceramic Engineering
+Eligibility: M.Tech in Ceramic Engineering
 Admission: Entrance Exam(NET/SET/RET) + Interview
 Fees : Approximately ₹18,000     ₹20,000 per year.
 Seats: 8
@@ -1280,7 +1280,7 @@ Level: Doctoral
 Course Category: Engineering & Technology
 Department: Chemical Technology
 Duration: 3 to 6 Years
-Eligibility: M.Tech. in Oil Technology
+Eligibility: M.Tech in Oil Technology
 Admission: Entrance Exam(NET/SET/RET) + Interview
 Fees : Approximately ₹18,000 per year
 Seats: 8
@@ -1293,7 +1293,7 @@ Level: Doctoral
 Course Category: Engineering & Technology
 Department: Chemical Technology
 Duration: 3 to 5 Years
-Eligibility: M. Tech. in Petrochemicals & Petroleum Refinery Engineering
+Eligibility: M.Tech in Petrochemicals & Petroleum Refinery Engineering
 Admission: Entrance Exam(NET/SET/RET) + Interview
 Fees : Approximately ₹15,000
 Seats: 8
@@ -1306,7 +1306,7 @@ Level: Doctoral
 Course Category: Engineering & Technology
 Department: Chemical Technology
 Duration: 3 Years
-Eligibility: M. Tech. in Pharmaceutical Technology / M.SC.
+Eligibility: M.Tech in Pharmaceutical Technology / M.SC.
 Admission: Entrance Exam(NET/SET/RET) + Interview
 Fees : NA
 Seats: 8
@@ -1327,25 +1327,25 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: B.Tech. in Jute and Fibre Technology
+Course Name: B.Tech in Jute and Fibre Technology
 Level: Undergraduate
 Course Category: Engineering & Technology 
 Department: Jute and Fibre Technology
 Duration: 4 Years
 Eligibility: 10+2(Sc.)+ WBJEE/JELET qualified
 Admission: WBJEE/JELET exam + merit based 
-Fees : Approximately ₹30,926     ₹38,075
+Fees : Approximately ₹30,926 to ₹38,075
 Seats: 63
 Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Tech. Course in Textile Technology
+Course Name: M.Tech Course in Textile Technology
 Level: Postgraduate
 Course Category: Engineering & Technology
 Department: Jute and Fibre Technology
 Duration: 2 Years
-Eligibility: B. Tech/M.Sc. in Textile Technology/Jute and Fibre Technology or equivalent
+Eligibility: B.Tech/M.Sc. in Textile Technology/Jute and Fibre Technology or equivalent
 Admission: GATE Exam
 Fees : Approximately ₹24,000. 
 Seats: 18
@@ -1353,7 +1353,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: Ph. D (Tech)  Programme in Textile Technology
+Course Name: Ph.D. Programme in Textile Technology
 Level: Research
 Course Category: Engineering & Technology
 Department: Jute and Fibre Technology

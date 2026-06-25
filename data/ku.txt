@@ -41,7 +41,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: B.Tech.(CSE)
+Course Name: B.Tech in Computer Science and Engineering
 Level: Undergraduate
 Course Category: Engineering Technology & Management
 Department: Computer Science and Engineering
@@ -56,7 +56,7 @@ Source: Official Website of KU.
 
 
 University: University of Kalyani
-Course Name: M.Tech. (CSE)
+Course Name: M.Tech in Computer Science and Engineering
 Level: Postgraduate
 Course Category: Engineering Technology & Management
 Department: Computer Science and Engineering
@@ -128,7 +128,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: B. Tech. in Electronics and Communication Engineering
+Course Name: B.Tech in Electronics and Communication Engineering
 Level: Undergraduate
 Course Category: Engineering Technology & Management
 Department: Engineering and Technological Studies
@@ -142,7 +142,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: B. Tech. in Electronics and Instrumentation Engineering
+Course Name: B.Tech in Electronics and Instrumentation Engineering
 Level: Undergraduate
 Course Category: Engineering Technology & Management
 Department: Engineering and Technological Studies
@@ -156,7 +156,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: B. Tech. in Information Technology
+Course Name: B.Tech in Information Technology
 Level: Undergraduate
 Course Category: Engineering Technology & Management
 Department: Engineering and Technological Studies
@@ -170,7 +170,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: M.Tech. in Communication Engineering
+Course Name: M.Tech in Communication Engineering
 Level: Postgraduate
 Course Category: Engineering Technology & Management
 Department: Engineering and Technological Studies
@@ -184,7 +184,7 @@ Source: Official Website of KU.
                                                                                  
 
 University: University of Kalyani
-Course Name: M.Tech. in Information Technology
+Course Name: M.Tech in Information Technology
 Level: Postgraduate
 Course Category: Engineering Technology & Management
 Department: Engineering and Technological Studies
