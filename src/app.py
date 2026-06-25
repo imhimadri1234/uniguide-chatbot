@@ -314,6 +314,28 @@ html, body, [class*="css"] {
     padding: 2.5rem;
     backdrop-filter: blur(20px);
 }
+
+/* Make mic button align perfectly with chat input */
+div[data-testid="stHorizontalBlock"] {
+    align-items: flex-end !important;
+    gap: 4px !important;
+    margin-bottom: -3.2rem !important;
+    margin-bottom: -1rem !important;
+}
+div[data-testid="stHorizontalBlock"] button[kind="secondary"] {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    height: 44px !important;
+    font-size: 1.1rem !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+div[data-testid="stHorizontalBlock"] button[kind="secondary"]:hover {
+    background: rgba(99,102,241,0.3) !important;
+    border-color: #a78bfa !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -865,12 +887,14 @@ with col_main:
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.rerun()
     # Voice Input - positioned beside chat input
-    col_chat, col_mic = st.columns([10, 1])
+    col_chat, col_mic = st.columns([11, 1])
+    with col_chat:
+        st.markdown('<div style="height:0px"></div>', unsafe_allow_html=True)
     with col_mic:
         voice_text = speech_to_text(
             language='en',
-            start_prompt="🎤",
-            stop_prompt="⏹️",
+            start_prompt="🎙️",
+            stop_prompt="⏹",
             just_once=True,
             use_container_width=True,
             key='voice_input'
