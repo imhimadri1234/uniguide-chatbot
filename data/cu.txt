@@ -589,7 +589,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.B.A. in Business Management 
+Course Name: MBA in Business Management 
 Level: Postgraduate
 Department: Business Management
 Course Category: Commerce, Social Welfare & Business Management
