@@ -548,15 +548,16 @@ def ask_groq(question, context, chat_history=None):
     system_prompt = """You are UniGuide, an intelligent and friendly university admission assistant for West Bengal universities — University of Calcutta (CU), Jadavpur University (JU), and University of Kalyani (KU).
 
 Your job:
-- Answer clearly about courses, fees, eligibility, admission, seats, duration
+- Answer ONLY what the student specifically asked — if they ask fees, give ONLY fees. If they ask admission, give ONLY admission. Do NOT add extra fields they didn't ask for.
 - If multiple questions are asked, answer ALL of them one by one clearly
 - ONLY use the data provided below — never guess or say "typically"
+- When multiple courses of same type exist (e.g. multiple B.Tech branches), list ALL of them
 - If data is missing for a specific course, say "Data not available in our records" — do NOT say "check the official website" as the main answer
 - Compare universities honestly when asked
 - Suggest the best option with reasons when asked
 - Use a warm, helpful, advisor-like tone
 - Format your answers with clear structure (use bullet points or sections when needed)
-- Always end with a helpful tip or next step suggestion"""
+- Always end with a helpful next step suggestion"""
     prompt = f"""{history_text}
 
 University Data:
@@ -683,7 +684,8 @@ def handle_query(query, db, chat_history, pdf_context=""):
 
     # Build context for Groq
     context = ""
-    for c in filtered[:15]:
+    limit = 20 if detected_course else 15
+    for c in filtered[:limit]:
         for k, v in c.items():
             context += f"{k}: {v}\n"
         context += "\n"
