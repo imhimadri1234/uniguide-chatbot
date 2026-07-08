@@ -376,13 +376,109 @@ def translate_to_english(text):
 
 def translate_to_bengali(text):
     try:
-        max_chunk = 4000
+        # Pre-replace technical terms before translation
+        replacements = {
+            "University of Calcutta": "কলকাতা বিশ্ববিদ্যালয়",
+            "Calcutta University": "কলকাতা বিশ্ববিদ্যালয়",
+            "Jadavpur University": "যাদবপুর বিশ্ববিদ্যালয়",
+            "University of Kalyani": "কল্যাণী বিশ্ববিদ্যালয়",
+            "Kalyani University": "কল্যাণী বিশ্ববিদ্যালয়",
+            "West Bengal": "পশ্চিমবঙ্গ",
+            "MBA": "এমবিএ",
+            "MCA": "এমসিএ",
+            "M.Tech": "এম.টেক",
+            "B.Tech": "বি.টেক",
+            "M.Sc": "এম.এস.সি",
+            "B.Sc": "বি.এস.সি",
+            "M.A": "এম.এ",
+            "B.A": "বি.এ",
+            "B.Ed": "বি.এড",
+            "M.Ed": "এম.এড",
+            "M.Phil": "এম.ফিল",
+            "Ph.D": "পিএইচডি",
+            "PhD": "পিএইচডি",
+            "LLM": "এলএলএম",
+            "LLB": "এলএলবি",
+            "BCA": "বিসিএ",
+            "BBA": "বিবিএ",
+            "M.Com": "এম.কম",
+            "B.Com": "বি.কম",
+            "B.Pharm": "বি.ফার্ম",
+            "M.Pharm": "এম.ফার্ম",
+            "Physics": "পদার্থবিজ্ঞান",
+            "Computer Science": "কম্পিউটার বিজ্ঞান",
+            "Mathematics": "গণিত",
+            "Chemistry": "রসায়ন",
+            "Biology": "জীববিজ্ঞান",
+            "Engineering": "ইঞ্জিনিয়ারিং",
+            "Management": "ম্যানেজমেন্ট",
+            "Data Science": "ডেটা সায়েন্স",
+            "seats": "আসন",
+            "fees": "ফি",
+            "eligibility": "যোগ্যতা",
+            "admission": "ভর্তি",
+            "duration": "সময়কাল",
+            "GATE": "গেট",
+            "WBJEE": "ডব্লিউবিজেইই",
+            "NET": "নেট",
+            "SET": "সেট",
+        }
+        for eng, bn in replacements.items():
+            text = text.replace(eng, bn)
+
+        max_chunk = 2000
         if len(text) <= max_chunk:
-            return GoogleTranslator(source='en', target='bn').translate(text)
+            translated = GoogleTranslator(source='en', target='bn').translate(text)
+            translated = translated if translated else text
         else:
             chunks = [text[i:i+max_chunk] for i in range(0, len(text), max_chunk)]
-            translated = [GoogleTranslator(source='en', target='bn').translate(c) for c in chunks]
-            return " ".join(translated)
+            translated = " ".join([GoogleTranslator(source='en', target='bn').translate(c) for c in chunks])
+
+        # Fix post-translation errors
+        post_fixes = {
+            # University name fixes
+            "রাজনীতি বিশ্ববিদ্যালয়": "কলকাতা বিশ্ববিদ্যালয়",
+            "কল্যাণী কলেজ": "কল্যাণী বিশ্ববিদ্যালয়",
+            "যাদবপুর কলেজ": "যাদবপুর বিশ্ববিদ্যালয়",
+            "কলকাতা কলেজ": "কলকাতা বিশ্ববিদ্যালয়",
+            "কলকাতার বিশ্ববিদ্যালয়": "কলকাতা বিশ্ববিদ্যালয়",
+            "কল্যাণের বিশ্ববিদ্যালয়": "কল্যাণী বিশ্ববিদ্যালয়",
+            "জাদবপুর বিশ্ববিদ্যালয়": "যাদবপুর বিশ্ববিদ্যালয়",
+
+            # Subject name fixes
+            "প্রযুক্তিবিদ্যায়": "পদার্থবিজ্ঞানে",
+            "প্রযুক্তি বিজ্ঞান": "পদার্থবিজ্ঞান",
+            "শারীরিক বিজ্ঞান": "পদার্থবিজ্ঞান",
+            "ভৌত বিজ্ঞান": "পদার্থবিজ্ঞান",
+            "পদার্থবিদ্যা": "পদার্থবিজ্ঞান",
+            "কম্পিউটার বিজ্ঞান বিজ্ঞান": "কম্পিউটার বিজ্ঞান",
+            "তথ্য বিজ্ঞান": "ডেটা সায়েন্স",
+            "ব্যবস্থাপনা বিজ্ঞান": "ম্যানেজমেন্ট",
+            "আইন বিজ্ঞান": "আইন",
+            "ঔষধ বিজ্ঞান": "ফার্মেসি",
+            "রসায়ন বিজ্ঞান": "রসায়ন",
+            "গণিত বিজ্ঞান": "গণিত",
+
+            # Course name fixes
+            "মাস্টার অফ বিজনেস অ্যাডমিনিস্ট্রেশন": "এমবিএ",
+            "মাস্টার অফ কম্পিউটার অ্যাপ্লিকেশন": "এমসিএ",
+            "ব্যাচেলর অফ টেকনোলজি": "বি.টেক",
+            "মাস্টার অফ টেকনোলজি": "এম.টেক",
+            "ডক্টর অফ ফিলোসফি": "পিএইচডি",
+            "স্নাতকোত্তর": "পিজি",
+            "স্নাতক": "ইউজি",
+
+            # Common wrong translations
+            "আসন সংখ্যা সংখ্যা": "আসন সংখ্যা",
+            "ফি ফি": "ফি",
+            "যোগ্যতা যোগ্যতা": "যোগ্যতা",
+            "ভর্তি ভর্তি": "ভর্তি",
+            "বিশ্ববিদ্যালয় বিশ্ববিদ্যালয়": "বিশ্ববিদ্যালয়",
+        }
+        for wrong, correct in post_fixes.items():
+            translated = translated.replace(wrong, correct)
+
+        return translated
     except Exception as e:
         return text
 # ─── HELPERS ────────────────────────────────────────────────────────────────
@@ -403,7 +499,7 @@ course_alias = {
     "be": ["be", "b.e"],
     "bca": ["bca"],
     "bba": ["bba"],
-    "bed": ["bed", "b.ed"],
+    "bed": ["bed", "b.ed", "bachelor of education", "b.ed."],
     "bpharm": ["bpharm", "b.pharm"],
     "llb": ["llb"],
     "ma": ["ma", "m.a"],
@@ -629,8 +725,63 @@ def handle_query(query, db, chat_history, pdf_context=""):
     original_query = query
     if is_bengali_query:
         query = translate_to_english(query)
+    # ── Prompt injection guard ──
+    injection_phrases = [
+        "ignore previous instructions", "ignore all instructions",
+        "forget previous", "you are now", "act as",
+        "pretend you are", "disregard", "override",
+        "system prompt", "new instructions",
+    ]
+    nq_lower = query.lower()
+    if any(phrase in nq_lower for phrase in injection_phrases):
+        return "🎓 I'm UniGuide — I can only help with university admission queries for CU, JU and KU. Please ask me about courses, fees, eligibility or admissions!"
 
-    universities, detected_course, intents = detect_entities(query)
+    # ── Future prediction guard ──
+    future_phrases = ["will be in 20", "predict", "forecast", "future fees", "in 2030", "in 2025", "in 2026"]
+    if any(phrase in nq_lower for phrase in future_phrases):
+        return "📊 I only have current data and cannot predict future fees or admission details. Please ask me about current courses, fees and eligibility!"
+    # ── List all courses guard ──
+    list_all_phrases = ["list every", "list all courses", "all courses offered", 
+                        "every single course", "every course", "all the courses"]
+    if any(phrase in nq_lower for phrase in list_all_phrases):
+        return """📚 I have 700+ courses across CU, JU and KU — too many to list all at once!
+
+Instead try asking:
+- "What Computer Science courses are in JU?"
+- "What Engineering courses does KU offer?"
+- "What Management courses are available in CU?"
+- "List all PG courses in KU"
+
+This way I can give you a focused and useful answer! 🎓"""
+
+    # ── Unknown/fictional course guard ──
+    # This is handled by the RAG system automatically
+    # But improve the error message
+
+    # ── Strip irrelevant parts from compound queries ──
+    irrelevant_phrases = [
+        "history of", "explain the entire", "tell me the story",
+        "tell me a joke", "what is the capital", "who invented",
+        "tell me about world", "general knowledge"
+    ]
+    cleaned_query = query
+    for phrase in irrelevant_phrases:
+        if phrase in nq_lower:
+            cleaned_query = re.sub(re.escape(phrase) + r'[^,?.]*', '', cleaned_query, flags=re.IGNORECASE)
+    query = cleaned_query.strip()
+    # Remove filler phrases that confuse entity detection
+    clean_query = query.lower()
+    clean_query = clean_query.replace("tell me about", "")
+    clean_query = clean_query.replace("tell me", "")
+    clean_query = clean_query.replace("what is", "")
+    clean_query = clean_query.replace("what are", "")
+    clean_query = clean_query.replace("can you tell me", "")
+    clean_query = clean_query.replace("i want to know about", "")
+    clean_query = clean_query.replace("give me information about", "")
+    clean_query = clean_query.replace("give me details about", "")
+    clean_query = clean_query.strip()
+
+    universities, detected_course, intents = detect_entities(clean_query)
     nq = normalize(query)
     is_compare = "compare" in nq or "difference" in nq or "vs" in nq
     is_best = "best" in nq or "lowest" in nq or "cheapest" in nq or "better" in nq
@@ -642,13 +793,21 @@ def handle_query(query, db, chat_history, pdf_context=""):
     sub_questions = [q.strip() for q in sub_questions if len(q.strip()) > 5]
 
     all_results = []
-    if len(sub_questions) > 1:
-        # Search separately for each sub-question
-        for sq in sub_questions:
-            results = db.similarity_search(sq, k=40)
+    # Always search full query first
+    all_results = db.similarity_search(query, k=40)
+    
+    # Also search each comma-separated part separately
+    comma_parts = [p.strip() for p in query.split(',') if len(p.strip()) > 3]
+    if len(comma_parts) > 1:
+        for part in comma_parts:
+            results = db.similarity_search(part, k=20)
             all_results.extend(results)
-    else:
-        all_results = db.similarity_search(query, k=40)
+    
+    # Also search sub-questions split by ?
+    if len(sub_questions) > 1:
+        for sq in sub_questions:
+            results = db.similarity_search(sq, k=20)
+            all_results.extend(results)
 
     # Deduplicate results
     seen = set()
@@ -675,12 +834,19 @@ def handle_query(query, db, chat_history, pdf_context=""):
         else:
             parsed=parsed
 
-    filtered = filter_courses(parsed, universities, detected_course)
-    
-    if detected_course and len(filtered) == 0:
-        return "Sorry, that course doesn't appear to be available in the selected universities. Try asking without specifying a university to see all options."
-    if not filtered:
+    # For multi-university queries, don't filter by university
+    comma_parts = [p.strip() for p in query.split(',') if len(p.strip()) > 3]
+    is_multi_uni_query = len(comma_parts) > 1
+
+    if is_multi_uni_query:
+        # Don't filter — let Groq handle all results
         filtered = parsed
+    else:
+        filtered = filter_courses(parsed, universities, detected_course)
+        if detected_course and len(filtered) == 0:
+            return f"🔍 This course doesn't appear to be available in our records for the selected universities. This could mean:\n\n• The course is not offered by CU, JU or KU\n• The course name might be spelled differently\n\nTry asking without specifying a university, or check the official university websites."
+        if not filtered:
+            filtered = parsed
 
     # Build context for Groq
     context = ""
