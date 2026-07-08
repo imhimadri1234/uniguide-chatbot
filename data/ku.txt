@@ -928,7 +928,7 @@ Source: Official Website of KU.
                                                   
 
 University Name: University Of Kalyani
-Course Name: Bachelor of Education (B.Ed.) 
+Course Name: B.Ed
 Level: Undergraduate
 Course Category: Education
 Department: Education
@@ -942,7 +942,7 @@ Source: Official Website of KU.
                                                   
 
 University Name: University Of Kalyani
-Course Name: Master of Education (M.Ed.) 
+Course Name: M.Ed
 Level: Postgraduate
 Course Category: Education
 Department: Education
@@ -956,7 +956,7 @@ Source: Official Website of KU.
                                                   
 
 University Name: University Of Kalyani
-Course Name: Master of Philosophy (M.Phil.) in Education
+Course Name: M.Phil in Education
 Level: Post postgraduate
 Course Category: Education
 Department: Education
@@ -970,7 +970,7 @@ Source: Official Website of KU.
                                                   
 
 University Name: University Of Kalyani
-Course Name: Doctor of Philosophy (Ph.D.) in Education
+Course Name: Ph.D in Education
 Level: Doctoral
 Course Category: Education
 Department: Education
