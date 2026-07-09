@@ -492,29 +492,31 @@ def word_match(word, text):
 
 # ─── COURSE ALIASES ─────────────────────────────────────────────────────────
 course_alias = {
-    "ba": ["ba", "b.a", "bachelor of arts"],
+    "ba": ["ba", "b.a", "bachelor of arts","B.A."],
     "bsc": ["bsc", "b.sc", "bachelor of science"],
     "bcom": ["bcom", "b.com", "bachelor of commerce"],
     "btech": ["btech", "b.tech", "b tech"],
     "be": ["be", "b.e"],
     "bca": ["bca"],
     "bba": ["bba"],
-    "bed": ["bed", "b.ed", "B.Ed","bachelor of education", "b.ed."],
+    "bed": ["bed", "b.ed", "B.Ed.","bachelor of education", "b.ed."],
     "bpharm": ["bpharm", "b.pharm"],
     "llb": ["llb"],
-    "ma": ["ma", "m.a"],
+    "ma": ["ma", "m.a","M.A."],
     "msc": ["msc", "m.sc"],
     "mcom": ["mcom", "m.com"],
     "mtech": ["mtech", "m.tech"],
     "me": ["me", "m.e"],
     "mba": ["mba"],
     "mca": ["mca", "master of computer application"],
-    "med": ["med", "m.ed","M.Ed"],
+    "med": ["med", "m.ed","M.Ed."],
     "mpharm": ["mpharm", "m.pharm"],
     "llm": ["llm"],
     "mphil": ["mphil", "m.phil"],
     "mbbs": ["mbbs", "medical"],
-    "phd": ["phd", "ph.d"],
+    "phd": ["phd", "ph.d","Ph.D."],
+    "blibisc": ["bachelor of library and information science","B.Lib.I.Sc.","b.lib.i.sc."],
+    "mlibisc": ["Master of Library & Information Science","M.Lib.I.Sc.","m.lib.i.sc"]
 }
 
 INTEREST_SUGGESTIONS = {
