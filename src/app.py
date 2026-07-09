@@ -921,9 +921,26 @@ with st.sidebar:
 
     st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
+    # Download Chat History
+    if st.session_state.get("messages"):
+        chat_text = f"UniGuide Chat History\n{'='*40}\n\n"
+        for msg in st.session_state.messages:
+            role = "You" if msg["role"] == "user" else "UniGuide"
+            chat_text += f"{role}:\n{msg['content']}\n\n{'-'*30}\n\n"
+        
+        st.download_button(
+            label="📥 Download Chat",
+            data=chat_text.encode('utf-8'),
+            file_name="uniguide_chat.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
+
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
+
+    
 
     if st.button("🚪 Logout", use_container_width=True):
         st.session_state.logged_in = False
