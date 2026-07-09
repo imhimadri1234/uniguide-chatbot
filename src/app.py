@@ -936,11 +936,40 @@ with st.sidebar:
             use_container_width=True
         )
 
+    # Share Chat on WhatsApp
+    if st.session_state.get("messages"):
+        last_3 = st.session_state.messages[-6:] if len(st.session_state.messages) >= 6 else st.session_state.messages
+        share_text = "Check out what I found on UniGuide!\n\n"
+        for msg in last_3:
+            if msg["role"] == "user":
+                share_text += f"Q: {msg['content']}\n"
+            else:
+                short_ans = msg['content'][:200].replace('\n', ' ')
+                share_text += f"A: {short_ans}...\n\n"
+        share_text += "\nTry UniGuide: https://uniguide-chatbot.streamlit.app"
+
+        import urllib.parse
+        whatsapp_url = f"https://wa.me/?text={urllib.parse.quote(share_text)}"
+        
+        st.markdown(f'''
+        <a href="{whatsapp_url}" target="_blank" style="
+            display: block;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: Sora, sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        ">📱 Share on WhatsApp</a>
+        ''', unsafe_allow_html=True)
+
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
-
-    
 
     if st.button("🚪 Logout", use_container_width=True):
         st.session_state.logged_in = False
