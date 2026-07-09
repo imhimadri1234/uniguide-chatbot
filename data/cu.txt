@@ -64,7 +64,7 @@ Source: Official Website of CU.
 
                  
 University Name: University Of Calcutta
-Course Name: M.Sc(Ag.) in Plant Physiology
+Course Name: M.Sc (Ag.) in Plant Physiology
 Level: Master Degree
 Course Category: Agriculture
 Department: Plant Physiology
