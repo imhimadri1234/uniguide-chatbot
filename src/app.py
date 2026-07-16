@@ -894,6 +894,12 @@ This way I can give you a focused and useful answer! 🎓"""
     clean_query = clean_query.replace("i want to know about", "")
     clean_query = clean_query.replace("give me information about", "")
     clean_query = clean_query.replace("give me details about", "")
+    clean_query = clean_query.replace("give me the course details of", "course details")
+    clean_query = clean_query.replace("give me course details of", "course details")
+    clean_query = clean_query.replace("give me the details of", "")
+    clean_query = clean_query.replace("give me details of", "")
+    clean_query = clean_query.replace("give me the", "")
+    clean_query = clean_query.replace("give me", "")
     clean_query = clean_query.strip()
 
     universities, detected_course, intents = detect_entities(clean_query)
